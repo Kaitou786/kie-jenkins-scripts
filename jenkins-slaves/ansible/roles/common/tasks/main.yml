@@ -238,6 +238,22 @@
     owner: jenkins
     group: jenkins
 
+### CRC ###
+- name: Download CRC archives
+  get_url:
+    url: https://mirror.openshift.com/pub/openshift-v4/clients/crc/{{crc_version}}/crc-linux-amd64.tar.xz
+    dest: /tmp/downloads/
+    owner: jenkins
+    group: jenkins
+
+- name: Extract CRC archives
+  unarchive:
+    copy: no
+    src: /tmp/downloads/crc-linux-amd64.tar.gz
+    dest: /opt/tools/extras/
+    owner: jenkins
+    group: jenkins
+
 ### Source-to-image ###
 - name: Download s2i archives
   get_url:
