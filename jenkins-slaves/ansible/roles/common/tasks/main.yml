@@ -242,7 +242,7 @@
 - name: Download CRC archives
   get_url:
     url: https://mirror.openshift.com/pub/openshift-v4/clients/crc/{{crc_version}}/crc-linux-amd64.tar.xz
-    dest: /tmp/downloads/
+    dest: /tmp/downloads/crc-linux-amd64.tar.gz
     owner: jenkins
     group: jenkins
 
